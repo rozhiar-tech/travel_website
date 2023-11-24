@@ -4,7 +4,16 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the page takes up at least the full viewport height */
+}
+html {
+  position: relative;
+}
 /* Set a height for the first section */
 .first-section {
   height: 100vh; /* Adjust as needed */
@@ -72,6 +81,15 @@ nav {
   color: #fff; /* Text color */
   cursor: pointer;
   transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Smooth transition */
+
+  /* Additional button styling */
+}
+.buttons button a {
+  text-decoration: none; /* Remove underline from links */
+  color: white;
+  /* Change link color */
+  font-weight: bold;
+  font-size: 20px;
 
   /* Additional button styling */
 }
@@ -156,13 +174,14 @@ nav {
   /* Additional button styling */
 }
 .second-section {
-  background-color: #f8f8f8; /* Background color for the section */
+  background-color: #fff; /* Background color for the section */
   padding: 50px 0; /* Adjust padding as needed */
   text-align: center; /* Center-align content */
 }
 
 .text-container {
   margin-bottom: 30px; /* Space between text and counters */
+  width: 100%;
 }
 
 .text-container h2 {
@@ -286,7 +305,7 @@ nav {
 }
 
 .third-section {
-  background-color: #f8f8f8;
+  background-color: #fff;
   padding: 50px;
   text-align: start;
   display: flex;
@@ -316,11 +335,33 @@ nav {
 
 .destination-cards {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+
+  padding: 20px;
+}
+.destination-cards2 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
   padding: 20px;
 }
 
+.card2 {
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 0 10px;
+  height: 300px;
+  margin-top: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
 .card {
   width: 300px;
   padding: 20px;
@@ -328,6 +369,7 @@ nav {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   margin: 0 10px;
+  height: 100%;
 }
 
 .card img {
@@ -346,4 +388,165 @@ nav {
 .card p {
   font-size: 16px;
   color: #666;
+}
+
+.fourth-section {
+  background-color: #fff;
+  padding: 50px;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 600px;
+  width: 100%;
+}
+
+.line3 {
+  left: 60px;
+  top: 1920px;
+  position: absolute;
+  width: 90px; /* Width of the line */
+  height: 10px; /* Height of the line */
+  background-color: #f47751; /* Color of the line */
+  margin: 0 auto 20px; /* Center the line and add space below */
+}
+
+/* Style for the icon container */
+.icon_container {
+  display: inline-block; /* Ensures container size fits its content */
+  background-color: rgba(244, 119, 81, 0.5); /* Color with opacity */
+  padding: 10px; /* Adjust padding as needed */
+  border-radius: 12px;
+}
+
+/* Style for the travel icon */
+.travel-icon {
+  color: #f47751; /* Icon color */
+  font-size: 24px; /* Adjust icon size */
+}
+
+.Features {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 200px;
+}
+
+.fifth-section {
+  background-color: #fff;
+  padding: 50px;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 400px;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 300px;
+}
+
+.line4 {
+  left: 60px;
+  top: 2570px;
+  position: absolute;
+  width: 90px; /* Width of the line */
+  height: 10px; /* Height of the line */
+  background-color: #f47751; /* Color of the line */
+  margin: 0 auto 20px; /* Center the line and add space below */
+}
+
+.testimonial {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.testimonial-item {
+  text-align: center;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 10px;
+  background-color: #fff;
+  margin-top: 40px;
+}
+
+.testimonial-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.testimonial-item h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.testimonial-item p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.testimonial-text {
+  font-style: italic;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.quote-icon {
+  font-size: 24px;
+  color: #f47751;
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.main-footer {
+  background-color: rgb(4, 4, 54);
+  color: white;
+  padding: 30px 0;
+  width: 100%;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-section h4 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
 }
