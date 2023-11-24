@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha384-7U5lFu5+VQe4ZW5Sp/RYmNjkA5pa6Ip6IFLoJkooeogw3OEraNTgq5jZhaZXOB1w"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/8bc3380df1.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Go</title>
+  </head>
+  <body>
+    <section class="first-section">
+      <div class="background-image">
+        <!-- Your image goes here -->
+      </div>
+      <nav class="navv">
+        <div class="logo">
+          <h1>Text Logo</h1>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Discover</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li class="about"><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="buttons">
+          <button>Login</button>
+          <button>Register</button>
+        </div>
+      </nav>
+      <div class="content">
+        <div class="column">
+          <p>
+            Discover <span class="break">New</span><br />
+            Things <span class="break">In</span><br />
+            World <span class="break">Exploration</span>
+          </p>
+          <p>
+            Unique ways to discover the beauty of the world with natural and
+            cultural beauty
+          </p>
+          <button class="travel">Get Starter</button>
+        </div>
+      </div>
+    </section>
+    <section class="second-section">
+      <div class="text-container">
+        <h2>The Most <span class="highlight">Prefered</span></h2>
+        <div class="line"></div>
+        <div class="counters">
+          <div class="counter" data-target="100000">
+            <i class="fas fa-users counter-icon"></i> Our Explorers
+            <span class="count">0</span>
+          </div>
+          <div class="counter" data-target="5000">
+            <i class="fas fa-map-marker-alt counter-icon"></i> Destinations
+            <span class="count">0</span>
+          </div>
+          <div class="counter" data-target="10000">
+            <i class="fas fa-plane counter-icon"></i> More Trips
+            <span class="count">0</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="third-section">
+      <div class="text-container2">
+        <h2>Top Most Popular <span class="highlight">Destinations</span></h2>
+        <div class="line2"></div>
+      </div>
+      <div class="destination-cards">
+        <div class="card">
+          <img src="assets/boat.jpg" alt="Destination 1" />
+          <h3>Destination Name 1</h3>
+          <p>Description of Destination 1</p>
+        </div>
+        <div class="card">
+          <img src="assets/boat.jpg" alt="Destination 2" />
+          <h3>Destination Name 2</h3>
+          <p>Description of Destination 2</p>
+        </div>
+        <div class="card">
+          <img src="assets/boat.jpg" alt="Destination 3" />
+          <h3>Destination Name 3</h3>
+          <p>Description of Destination 3</p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Function to initiate the counter animation on scroll
+      window.addEventListener("scroll", () => {
+        const counters = document.querySelectorAll(".counter");
+        const section = document.querySelector(".second-section");
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (sectionTop < windowHeight * 0.75) {
+          counters.forEach((counter) => {
+            const target = +counter.getAttribute("data-target");
+            let count = 0;
+            const updateCounter = () => {
+              const increment = target / 100;
+              count += increment;
+              if (count < target) {
+                counter.querySelector(".count").innerText = Math.ceil(count);
+                setTimeout(updateCounter, 30);
+              } else {
+                counter.querySelector(".count").innerText = target;
+              }
+            };
+            updateCounter();
+          });
+          window.removeEventListener("scroll", animateCounters);
+        }
+      });
+    </script>
+  </body>
+</html>

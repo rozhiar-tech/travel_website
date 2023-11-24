@@ -1,0 +1,349 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set a height for the first section */
+.first-section {
+  height: 100vh; /* Adjust as needed */
+  position: relative;
+}
+
+/* Style the background image */
+.background-image {
+  background-image: url("./assets/boat.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%; /* Make sure the image takes the full height of the section */
+}
+
+/* Style the navigation */
+nav {
+  position: absolute;
+  top: 20px; /* Adjust as needed */
+  left: 20px; /* Adjust as needed */
+  display: flex;
+  align-items: center;
+  /* Additional styling for the navigation bar */
+}
+
+.logo {
+  font-size: 24px; /* Adjust the size of the text logo */
+  font-weight: bold;
+  margin-right: 20px; /* Add spacing between the logo and links */
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin-left: 380px;
+}
+.about {
+  margin-left: 70px;
+}
+
+.nav-links li {
+  margin-right: 20px; /* Adjust spacing between links */
+}
+
+.nav-links li a {
+  text-decoration: none; /* Remove underline from links */
+  color: white;
+  /* Change link color */
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.buttons {
+  display: flex;
+  margin-left: auto; /* Push buttons to the right */
+  margin-left: 250px;
+}
+
+.buttons button {
+  margin-right: 10px; /* Adjust spacing between buttons */
+  padding: 12px 24px; /* Increase button size */
+  border: 1px solid #fff; /* White border initially */
+  border-radius: 5px;
+  background-color: transparent; /* Transparent button background */
+  color: #fff; /* Text color */
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Smooth transition */
+
+  /* Additional button styling */
+}
+
+/* On hover, change to opaque with a white border */
+.buttons button:hover {
+  background-color: #f0f0f0; /* Opaque background color */
+  border-color: #fff; /* White border color */
+  color: #333; /* Change text color on hover */
+}
+
+/* Style the content below the navigation */
+.content {
+  position: absolute;
+  bottom: 20px; /* Adjust as needed */
+  left: 20px; /* Adjust as needed */
+  /* Additional styling for the content */
+  padding: 50px;
+}
+
+.column {
+  /* Style your column content */
+}
+.column p {
+  line-height: 1; /* Increase line height for better readability */
+}
+
+.break {
+  display: inline-block; /* Make the span elements inline */
+  /* Adjust the spacing between lines */
+}
+
+.column p:first-child {
+  font-size: 60px; /* Increase font size for the first paragraph */
+  font-weight: bold; /* Make it bold */
+  margin-bottom: 10px; /* Add space between paragraphs */
+  color: white;
+}
+
+.column p:nth-child(2) {
+  font-size: 16px; /* Decrease font size for the second paragraph */
+  font-weight: lighter; /* Make it lighter */
+  margin-bottom: 20px; /* Add more space at the bottom */
+  color: white;
+}
+
+.travel {
+  padding: 16px 32px; /* Increase button padding */
+  width: 200px;
+  height: 60px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f47751; /* Orange background color */
+  cursor: pointer;
+  font-size: 20px; /* Increase font size */
+  transition: background-color 0.3s; /* Smooth transition */
+  font-weight: bold;
+
+  /* Additional button styling */
+}
+
+/* On hover, darken the button color slightly */
+.travel:hover {
+  background-color: #f47751; /* Darker shade of orange */
+  color: white;
+}
+
+.navv {
+  padding: 50px;
+}
+
+.column p {
+  margin-bottom: 10px; /* Add space between paragraphs */
+}
+
+.column button {
+  padding: 10px 20px; /* Adjust button padding */
+  background-color: #f0f0f0; /* Button background color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* Additional button styling */
+}
+.second-section {
+  background-color: #f8f8f8; /* Background color for the section */
+  padding: 50px 0; /* Adjust padding as needed */
+  text-align: center; /* Center-align content */
+}
+
+.text-container {
+  margin-bottom: 30px; /* Space between text and counters */
+}
+
+.text-container h2 {
+  font-size: 56px; /* Adjust heading size */
+}
+
+.highlight {
+  color: #f47751; /* Color for the highlighted text */
+}
+
+.line {
+  left: 790px;
+  top: 770px;
+  position: absolute;
+  width: 90px; /* Width of the line */
+  height: 10px; /* Height of the line */
+  background-color: #f47751; /* Color of the line */
+  margin: 0 auto 20px; /* Center the line and add space below */
+}
+
+.counters {
+  margin-top: 50px;
+
+  display: flex;
+  justify-content: space-around; /* Space the counters evenly */
+}
+
+.counter {
+  position: relative;
+  width: 260px; /* Increase width */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 24px; /* Decrease font size */
+  text-align: center;
+  margin: 0 10px;
+}
+
+.counter-icon {
+  font-size: 40px; /* Increase icon size */
+  color: #f47751;
+  position: absolute;
+  top: -38px; /* Position above the text */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%);
+}
+
+.count {
+  font-size: 28px; /* Increase counter font size */
+  font-weight: bold;
+  display: block; /* Display on a new line */
+  margin-top: 10px;
+}
+
+.counter::after {
+  content: "+";
+}
+
+/* Additional styling for text, buttons, etc. */
+/* For mobile devices up to 768px width */
+@media only screen and (max-width: 768px) {
+  .nav-links {
+    margin-left: 0; /* Reset margin for navigation links */
+    justify-content: space-between; /* Space out the navigation links */
+  }
+  .about {
+    margin-left: 0; /* Reset margin for 'About' link */
+  }
+  .buttons {
+    margin-left: 0; /* Reset margin for buttons */
+    justify-content: space-between; /* Space out the buttons */
+  }
+  .buttons button {
+    margin-right: 0; /* Reset margin between buttons */
+  }
+  .first-section {
+    height: auto; /* Allow section height to adjust based on content */
+  }
+  .background-image {
+    height: 50vh; /* Adjust height of the background image */
+  }
+  .navv {
+    padding: 20px; /* Reduce padding for navigation */
+  }
+  .content {
+    padding: 20px; /* Reduce padding for content */
+  }
+  .column p:first-child {
+    font-size: 40px; /* Adjust font size for the first paragraph */
+    margin-bottom: 20px; /* Adjust space between paragraphs */
+  }
+  .column p:nth-child(2) {
+    font-size: 14px; /* Adjust font size for the second paragraph */
+    margin-bottom: 30px; /* Adjust space between paragraphs */
+  }
+  .travel {
+    padding: 12px 24px; /* Adjust button padding */
+    width: 150px; /* Adjust button width */
+    height: 50px; /* Adjust button height */
+    font-size: 16px; /* Adjust button font size */
+  }
+  .line {
+    display: none; /* Hide the line on smaller screens */
+  }
+  .counters {
+    flex-direction: column; /* Align counters vertically */
+    margin-top: 20px; /* Adjust margin for counters */
+  }
+  .counter {
+    width: 80%; /* Adjust width for counters */
+    margin: 10px auto; /* Center counters */
+  }
+  .counter-icon {
+    font-size: 30px; /* Adjust icon size */
+    top: -30px; /* Position icon above text */
+  }
+  .count {
+    font-size: 20px; /* Adjust counter font size */
+  }
+}
+
+.third-section {
+  background-color: #f8f8f8;
+  padding: 50px;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.text-container2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.text-container2 h2 {
+  font-size: 36px;
+  color: #f47751;
+}
+
+.line2 {
+  left: 60px;
+  top: 1120px;
+  position: absolute;
+  width: 90px; /* Width of the line */
+  height: 10px; /* Height of the line */
+  background-color: #f47751; /* Color of the line */
+  margin: 0 auto 20px; /* Center the line and add space below */
+}
+
+.destination-cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.card {
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 0 10px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card p {
+  font-size: 16px;
+  color: #666;
+}
